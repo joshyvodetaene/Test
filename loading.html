@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<title>Access Private Trackers Now - Get Torrent Invites Free</title>
+	<link rel="stylesheet" href="style/w3.css">
+	<link rel="stylesheet" href="style/animate.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script type="text/javascript">
+
+          function nextPage(){
+            document.getElementById("mainbox").className = "w3-card-4 middlebox animated fadeOut";
+            setTimeout('window.location = "verify.html"',1000);
+            return true;
+          }
+
+          function move() {
+            var elem = document.getElementById("myBar"); 
+            var width = 1;
+            var id = setInterval(frame, 150);
+              function frame() {
+                if (width >= 100) {
+                  document.getElementById("myBar").className = "w3-progressbar w3-green w3-round";
+                  document.getElementById("lstatus").innerHTML = "Connected!";
+                  document.getElementById("conb").disabled = false;
+                  alert("Congratulations! You have been invited! Click 'Continue' to download your account info! Invites left for this tracker: 2");
+                  
+                  clearInterval(id);
+                } else {
+                    document.getElementById("lstatus").innerHTML = width +"%";
+                    width++; 
+                    elem.style.width = width + '%'; 
+                }
+               }
+             }
+          document.addEventListener('DOMContentLoaded', function() {
+          move();
+          }, false);
+        </script>
+
+
+  <style>
+
+	html{
+	background: url(images/backgr.png) no-repeat center center fixed; -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width:100%;
+	height:100%;
+	}
+	
+	.header {
+	margin: auto;
+	width: 50%;
+	padding: 10px
+	}
+
+	.mimage {
+	width: 90%;
+	}
+	
+	.connecting {
+	width: 100%;
+	}
+
+	.middlebox {
+	margin: auto;
+	width: 40%;
+	padding: 1px;
+	opacity: 0.8;
+	
+	}
+
+	.contains {
+	opacity: 1.0
+
+	}
+
+  </style>
+
+  </head>
+
+  <body>
+
+    <br>
+
+      <div class="header">
+        <center><img class="mimage" src="images/slith.png"></center>
+      </div>
+
+    <br>
+
+    <div id="mainbox" class="w3-card-4 middlebox animated bounceInLeft">
+      <div class="contains">
+          <img class="connecting" src="images/connecting.png">
+            
+          </header>
+	<footer class="w3-white  w3-container">
+          <h4 style=""><center>After connection click 'Continue'</center></h4>
+          <h4 style="">Status:</h4>
+          <div class="w3-progress-container">
+            <div id="myBar" class="w3-progressbar w3-blue w3-round" style="width:5%">
+              <div id="lstatus" class="w3-center w3-text-white">Connecting</div>
+            </div>
+          </div>
+          <br>
+            <div style="text-align: center;">
+	      <button id="conb" type="button" disabled onclick="nextPage()" class="w3-btn w3-blue w3-hover-red w3-round" style="width: 35%;height:74px;"><h2>Continue</h2> </button>
+            </div>
+          <p> </p>
+        </footer>
+        <footer style="clear: " class="w3-light-grey  w3-container">
+          
+        </footer>
+      </div>
+    </div>
+
+  </body>
+
+</html>
